@@ -1,0 +1,60 @@
+// 存放系统全局的样式，系统通用的样式
+@import './bem/index.scss';
+@import './index.scss';
+@import './bem/index.scss';
+@import './utils.scss';
+@import './iconfont.scss';
+// swiper {
+//   height: ;
+// }
+
+// carList common scss
+$choice-rpx: 36rpx;
+$gap: 24rpx;
+$choice-border: 1px solid #aaa;
+$choice-border-active: 1px solid #cea880;
+$choice-bgc: rgba(
+  $color: #cea880,
+  $alpha: 1,
+);
+// $car-goods-item-m-l: 32rpx;
+
+page {
+  background-color: $color-bg-grey;
+}
+
+:deep(.uni-list-item__container) {
+  padding: 0 !important;
+}
+
+:deep(.uni-list-item) {
+  background-color: transparent !important;
+  box-sizing: border-box !important;
+}
+
+:deep(.uni-list) {
+  background-color: transparent !important;
+}
+
+:deep(.uni-forms-item__content) {
+  display: flex !important;
+  align-items: center !important;
+}
+
+:deep(.uni-forms-item) {
+  margin-bottom: 24rpx;
+  // border-bottom: 2rpx solid $color-line;
+}
+:deep(.uni-forms-item__error) {
+  padding-top: 0;
+  top: 92%;
+}
+
+// nav-bar
+:deep(.uni-navbar) {
+  overflow: hidden !important;
+}
+
+:deep(.uni-navbar--fixed) {
+  overflow: hidden !important;
+}

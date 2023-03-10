@@ -1,0 +1,88 @@
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+// @font-face {
+//   font-family: 'dakai';
+//   font-weight: 400;
+//   src: url('//at.alicdn.com/wf/webfont/omru7ZY4pOQx/NQMkdEfGW_FAO5oP4XLBe.woff2')
+//       format('woff2'),
+//     url('//at.alicdn.com/wf/webfont/omru7ZY4pOQx/sC9xO3-33VJyj---BWe9o.woff')
+//       format('woff');
+//   font-display: swap;
+// }
+
+// 存放系统级的变量
+$global-padding: 0 36rpx;
+$theme-color: #c5342f; // 主题色号
+// 主题渐变
+$theme-linear-color: linear-gradient(292deg, #c5342f 4%, #c83b35 100%);
+$theme-linear-minor-color: linear-gradient(90deg, #701818, #c83434);
+$theme-linear-primary: #c5342f;
+$theme-linear-sec-primary: #c83b35;
+
+// 颜色
+$color-primary: #c5342f; // #edc7a0
+$color-white: white;
+$color-error: #f36d78;
+$color-desc: #f2995f;
+$color-crimson: #e6442e;
+// 文字颜色
+$color-font-black: #191919;
+$color-font-grey: #999;
+
+// 分割线颜色
+$color-line: #eee;
+// 背景颜色
+$color-bg-white: white;
+// $color-bg-grey: #f7f4f8;
+$color-bg-grey: #f5f5f5;
+
+// label required
+$color-label-required: red;
+//字体粗细
+$font-weight: 250;
+// 字体大小
+$font-size-mini: 18rpx;
+$font-size-micro: 20rpx;
+$font-size-min: 28rpx;
+$font-size-xm: 32rpx;
+$font-size-sm: 36rpx;
+$font-size-md: 40rpx;
+$font-size-lg: 44rpx;
+$font-size-xl: 48rpx;
+
+// 按钮颜色
+$btn-color-primary: #edcaa8;
+$btn-color-success: #4cd964;
+$btn-color-warning: #f0ad4e;
+$btn-color-error: #dd524d;
+/* 字体行高规范 */
+$line-height-max: 104rpx; //52px 3.25rem
+$line-height-xl: 52rpx; //26px 1.625rem
+$line-height-lg: 48rpx; //24px 1.5rem
+$line-height-md: 44rpx; //22px 1.375rem
+$line-height-sm: 36rpx; //18px 1.125rem
+$line-height-xs: 32rpx; //16px 1rem
+
+// 间距大小
+$space-xm: 12rpx;
+$space-sm: 20rpx;
+$space-md: 24rpx;
+$space-ml: 32rpx;
+$space-lg: 36rpx;
+$space-xl: 42rpx;
+$space-xxl: 48rpx;
+$space-max: 64rpx;
+
+// 圆角
+$radius-arc: 16rpx;
+$radius-cir: 88rpx;
+
+/* 卡片阴影 */
+$card-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
+
+// ios 底部安全间距
+$ios-bottom: 64rpx;
+
+// 间距
+$list-gap: 24rpx;
+
+$color-font-dim-gray: #666;

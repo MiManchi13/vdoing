@@ -1,0 +1,211 @@
+// 超出部分使用'...'标识,多行隐藏并不通用
+@mixin utils-ellipsis {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+// 超出部分使用'...'标识,多行隐藏通用
+@mixin utils-line-ellipsis($row) {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-overflow: -o-ellipsis-lastline;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  line-clamp: $row;
+  -webkit-box-orient: vertical;
+}
+// 页面选中
+@mixin utils-user-select($value) {
+  -moz-user-select: $value;
+  -webkit-user-select: $value;
+  -ms-user-select: $value;
+}
+
+// 清除浮动
+@mixin utils-clearfix {
+  $selector: &;
+  @at-root {
+    #{$selector}::before,
+    #{$selector}::after {
+      display: table;
+      content: '';
+    }
+    #{$selector}::after {
+      clear: both;
+    }
+  }
+}
+
+// input-placeholder工具
+@mixin utils-placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// 滚动条基本样式,更建议使用element的el-scrollbar组件
+@mixin utils-scrollbar {
+  $--scrollbar-thumb-background: #b4bccc;
+  $--scrollbar-track-background: #fff;
+  &::-webkit-scrollbar {
+    z-index: 11;
+    width: 6px;
+    &:horizontal {
+      height: 6px;
+    }
+    &-thumb {
+      border-radius: 5px;
+      width: 6px;
+      background: $--scrollbar-thumb-background;
+    }
+    &-corner {
+      background: $--scrollbar-track-background;
+    }
+    &-track {
+      background: $--scrollbar-track-background;
+      &-piece {
+        background: $--scrollbar-track-background;
+        width: 6px;
+      }
+    }
+  }
+}
+
+// 响应式工具,更建议直接使用element的响应式样式
+@mixin utils-res($min-width: -1, $max-width: -1) {
+  @if $min-width == -1 and $max-width == -1 {
+    @warn ("min width and max width is invalid");
+  } @else {
+    $media-rule: '';
+    @if $min-width >=0 and $max-width >= 0 {
+      $media-rule: '(min-width: #{$min-width}px) and (max-width: #{$max-width}px)';
+    } @else if $min-width >=0 {
+      $media-rule: '(min-width: #{$min-width}px)';
+    } @else {
+      $media-rule: '(max-width: #{$max-width}px)';
+    }
+  }
+  @media only screen and #{unquote($media-rule)} {
+    @content;
+  }
+}
+
+// css旋转动画过渡
+@mixin transition-rotate($time, $f-angle: 0deg, $l-angle: 360deg) {
+  animation: myfirst $time + s;
+  -webkit-animation: myfirst $time + s; /* Safari 与 Chrome */
+  @keyframes myfirst {
+    from {
+      transform: rotate($f-angle);
+    }
+    to {
+      transform: rotate($l-angle);
+    }
+  }
+  /* Safari 与 Chrome */
+  @-webkit-keyframes myfirst {
+    from {
+      transform: rotate($f-angle);
+    }
+    to {
+      transform: rotate($l-angle);
+    }
+  }
+  @content;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
+
+@mixin flex-direction-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @content;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  @content;
+}
+
+@mixin flex-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @content;
+}
+
+@mixin flex-sb-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @content;
+}
+@mixin flex-horizontal {
+  display: flex;
+  justify-content: center;
+  @content;
+}
+@mixin flex-vertical {
+  display: flex;
+  align-items: center;
+  @content;
+}
+
+@mixin flex-direction-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @content;
+}
+
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  @content;
+}
+
+// 盒子 16 / 9
+@mixin b-16-9 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+@mixin b-2-1 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+}
+
+@mixin b-4-3 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+}

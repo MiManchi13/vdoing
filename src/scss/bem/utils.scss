@@ -1,0 +1,114 @@
+@import "./conf.scss";
+
+// 超出部分使用'...'标识,多行隐藏并不通用
+@mixin utils-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 页面选中
+@mixin utils-user-select($value) {
+  -moz-user-select: $value;
+  -webkit-user-select: $value;
+  -ms-user-select: $value;
+}
+
+// 清除浮动
+@mixin utils-clearfix {
+  $selector: &;
+  @at-root {
+    #{$selector}::before,
+    #{$selector}::after {
+      display: table;
+      content: "";
+    }
+    #{$selector}::after {
+      clear: both;
+    }
+  }
+}
+
+// input-placeholder工具
+@mixin utils-placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// 滚动条基本样式,更建议使用element的el-scrollbar组件
+@mixin utils-scrollbar {
+  $--scrollbar-thumb-background: #b4bccc;
+  $--scrollbar-track-background: #fff;
+  &::-webkit-scrollbar {
+    z-index: 11;
+    width: 6px;
+    &:horizontal {
+      height: 6px;
+    }
+    &-thumb {
+      border-radius: 5px;
+      width: 6px;
+      background: $--scrollbar-thumb-background;
+    }
+    &-corner {
+      background: $--scrollbar-track-background;
+    }
+    &-track {
+      background: $--scrollbar-track-background;
+      &-piece {
+        background: $--scrollbar-track-background;
+        width: 6px;
+      }
+    }
+  }
+}
+
+// 响应式工具,更建议直接使用element的响应式样式
+@mixin utils-res($min-width: -1, $max-width: -1) {
+  @if $min-width == -1 and $max-width == -1 {
+    @warn ("min width and max width is invalid");
+  } @else {
+    $media-rule: "";
+    @if $min-width >=0 and $max-width >= 0 {
+      $media-rule: "(min-width: #{$min-width}px) and (max-width: #{$max-width}px)";
+    } @else if $min-width >=0 {
+      $media-rule: "(min-width: #{$min-width}px)";
+    } @else {
+      $media-rule: "(max-width: #{$max-width}px)";
+    }
+  }
+  @media only screen and #{unquote($media-rule)} {
+    @content;
+  }
+}
+
+// css旋转动画过渡
+@mixin transition-rotate($time, $f-angle: 0deg, $l-angle: 360deg) {
+  animation: myfirst $time + s;
+  -webkit-animation: myfirst $time + s; /* Safari 与 Chrome */
+  @keyframes myfirst {
+    from {
+      transform: rotate($f-angle);
+    }
+    to {
+      transform: rotate($l-angle);
+    }
+  }
+  /* Safari 与 Chrome */
+  @-webkit-keyframes myfirst {
+    from {
+      transform: rotate($f-angle);
+    }
+    to {
+      transform: rotate($l-angle);
+    }
+  }
+  @content;
+}
