@@ -1,17 +1,22 @@
 <template>
-  <view class="content">
-    <h1>title</h1>
+  <view :class="ns.b()">
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { onLoad } from '@dcloudio/uni-app';
-onLoad(()=>{
-  
-})
-const title = ref('my first uniapp')
+import { useNamespace } from '@/core/hooks/useNameSpace'
+const ns = useNamespace('home');
 </script>
 
 <style lang="scss" scoped>
+$ns: home;
+
+@include block($ns) {
+  width: 750rpx;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>
