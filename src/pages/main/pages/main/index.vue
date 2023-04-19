@@ -1,11 +1,13 @@
 <template>
-  <view :class="ns.b()">
-  </view>
+  <view :class="ns.b()"> </view>
 </template>
 
 <script setup lang="ts">
-import { useNamespace } from '@/core/hooks/useNameSpace'
-const ns = useNamespace('home');
+import { useNamespace } from "@/core/hooks/useNameSpace";
+import { getData,postLogin } from "./index";
+const ns = useNamespace("home");
+getData();
+postLogin();
 </script>
 
 <style lang="scss" scoped>

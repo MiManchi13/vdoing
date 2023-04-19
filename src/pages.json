@@ -7,10 +7,9 @@
 	  },
 	"pages": [
 		{
-			"path": "pages/index/index",
+			"path": "pages/main/pages/main/index",
 			"style": {
-				"navigationStyle": "custom",
-				"initialRenderingCache":"static"
+				"navigationBarTitleText":"uni-app"
 			}
 		}
 	],

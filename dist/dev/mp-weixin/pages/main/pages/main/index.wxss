@@ -1,0 +1,167 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+/* 字体行高规范 */
+/* 卡片阴影 */
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+/* 字体行高规范 */
+/* 卡片阴影 */
+@font-face {
+  font-family: "iconfont"; /* Project id 3818716 */
+  src: url("//at.alicdn.com/t/c/font_3818716_n65u3eqa33i.woff2?t=1671083320317") format("woff2"), url("//at.alicdn.com/t/c/font_3818716_n65u3eqa33i.woff?t=1671083320317") format("woff"), url("//at.alicdn.com/t/c/font_3818716_n65u3eqa33i.ttf?t=1671083320317") format("truetype");
+}
+.iconfont.data-v-86693c75 {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-font-cart.data-v-86693c75:before {
+  content: "\e63e";
+}
+.icon-font-warning.data-v-86693c75:before {
+  content: "\e66b";
+}
+.icon-font-qiandao.data-v-86693c75:before {
+  content: "\e64c";
+}
+.icon-font-camera1.data-v-86693c75:before {
+  content: "\e614";
+}
+.icon-font-backward-a-r.data-v-86693c75:before {
+  content: "\e639";
+}
+.icon-font-step-3.data-v-86693c75:before {
+  content: "\e63b";
+}
+.icon-font-step-2.data-v-86693c75:before {
+  content: "\e63c";
+}
+.icon-font-step-1.data-v-86693c75:before {
+  content: "\e63d";
+}
+.icon-font-weixin.data-v-86693c75:before {
+  content: "\e637";
+}
+.icon-font-pyq.data-v-86693c75:before {
+  content: "﫥";
+}
+.icon-font-share.data-v-86693c75:before {
+  content: "\e609";
+}
+.icon-font-share1.data-v-86693c75:before {
+  content: "\e60b";
+}
+.icon-font-notice.data-v-86693c75:before {
+  content: "\e611";
+}
+.icon-font-collection.data-v-86693c75:before {
+  content: "\e612";
+}
+.icon-font-praise.data-v-86693c75:before {
+  content: "\e613";
+}
+.icon-font-share-gray-copy.data-v-86693c75:before {
+  content: "﫧";
+}
+.icon-font-nan.data-v-86693c75:before {
+  content: "\e60f";
+}
+.icon-font-nv.data-v-86693c75:before {
+  content: "\e610";
+}
+.icon-font-shaixuan.data-v-86693c75:before {
+  content: "\e6a6";
+}
+.icon-font-arrow-right-1.data-v-86693c75:before {
+  content: "﫦";
+}
+.icon-font-active-13.data-v-86693c75:before {
+  content: "\e60e";
+}
+.icon-font-inactive-11.data-v-86693c75:before {
+  content: "\e60a";
+}
+.icon-font-inactive-13.data-v-86693c75:before {
+  content: "\e60c";
+}
+.icon-font-active-11.data-v-86693c75:before {
+  content: "\e60d";
+}
+.icon-font-edit-1.data-v-86693c75:before {
+  content: "\e605";
+}
+.icon-font-close.data-v-86693c75:before {
+  content: "\e606";
+}
+.icon-font-save.data-v-86693c75:before {
+  content: "\e607";
+}
+.icon-font-camera.data-v-86693c75:before {
+  content: "\e608";
+}
+.icon-font-info.data-v-86693c75:before {
+  content: "\e604";
+}
+page.data-v-86693c75 {
+  background-color: #f5f5f5;
+}
+.data-v-86693c75 .uni-list-item__container {
+  padding: 0 !important;
+}
+.data-v-86693c75 .uni-list-item {
+  background-color: transparent !important;
+  box-sizing: border-box !important;
+}
+.data-v-86693c75 .uni-list {
+  background-color: transparent !important;
+}
+.data-v-86693c75 .uni-forms-item__content {
+  display: flex !important;
+  align-items: center !important;
+}
+.data-v-86693c75 .uni-forms-item {
+  margin-bottom: 24rpx;
+}
+.data-v-86693c75 .uni-forms-item__error {
+  padding-top: 0;
+  top: 92%;
+}
+.data-v-86693c75 .uni-navbar {
+  overflow: hidden !important;
+}
+.data-v-86693c75 .uni-navbar--fixed {
+  overflow: hidden !important;
+}
+.py-home.data-v-86693c75 {
+  width: 750rpx;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
